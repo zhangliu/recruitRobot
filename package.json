@@ -1,0 +1,25 @@
+{
+  "name": "recruit-robot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangliu/recruitRobot.git"
+  },
+  "author": "zhangliuge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangliu/recruitRobot/issues"
+  },
+  "homepage": "https://github.com/zhangliu/recruitRobot#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "nightmare": "^2.7.0"
+  }
+}
