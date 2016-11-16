@@ -1,6 +1,7 @@
 import nightmare from 'nightmare'
 import config from './config'
 import runHelper from './libs/runHellper'
+import email from './libs/email'
 
 const nm = nightmare({show: true})
 
@@ -10,7 +11,7 @@ async function run() {
     console.log('登录成功！');
   } catch (e) {
     console.log('登录失败！')
-    // TODO 需要发送邮件！
+    email.sendMail('[recruit robot]: 登录失败')
   }
 }
 

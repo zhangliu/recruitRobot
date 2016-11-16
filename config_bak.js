@@ -1,5 +1,19 @@
 const base64 = require('base-64')
 export default {
-  username: 'xxxx',
-  password: base64.decode('xxxxxxx'),
+  username: 'zhangliuge@yeah.net',
+  password: base64.decode('emhhbmdsaXVoanVpdmMw'),
+  email: {
+    sender: {
+      host: 'smtp.exmail.qq.com',
+      port: 465,
+      secure: true, // use SSL
+      auth: {
+        user: 'zhangyunnian@innobuddy.com',
+        pass: base64.decode('emhhbmdsaXVJbm5vYnVkZHkw'),
+      },
+    },
+    receivers: [
+      'zhangyunnian@innobuddy.com',
+    ],
+  },
 }
