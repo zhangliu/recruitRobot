@@ -1,0 +1,52 @@
+<div class="markdown-text"><p><img src="//dn-cnode.qbox.me/FhG1rVDKWDWxOkTaLszMyTC6N7yQ" alt="招聘banner.png"></p>
+<p><img src="//dn-cnode.qbox.me/FnKTALYrMcltXurzbhl2rGax6V6M" alt="1.jpg"></p>
+<h3>关于智课</h3>
+<ul>
+<li>中国在线教育行业的旗舰企业，业务覆盖出国留学、四六级、考研、高考等内容</li>
+<li>百度投资，连接人与服务</li>
+<li>线上拥有智课网、极智批改网两大在线学习平台</li>
+<li>线下拥有北京、上海、杭州、深圳、香港、纽约等地的30多家O2O培训实体面授中心</li>
+<li>拥有近450万用户，行业顶级</li>
+<li>清晰的盈利模式，轻轻松松变现</li>
+</ul>
+<h3>环境&amp;福利</h3>
+<ul>
+<li>绝对一流的薪资，18K起+期权，上不封顶</li>
+<li>全套macbook配置，代码写的飞起来</li>
+<li>免费水果、饮料、零食、旅游、商业保险、体检、按摩等各种福利</li>
+<li>除了年终奖，我们还有项目奖金，一秒变土豪</li>
+<li>每年若干次大型outing/出门开会，世界很大，我们要去看看</li>
+<li>每周举办篮球赛/足球赛/羽毛球赛，身体是革命的本钱</li>
+<li>自带健身房！脖子扭扭屁股扭扭，我们一起来做运动</li>
+<li>自带洗浴间！运动之后，岂能一身臭汗回家？</li>
+<li>自带游戏室！桌上足球、桌游、飞镖等，待你来战！</li>
+<li>高标准、高压力、高成长、高回报，少年，你可以活得年轻一些</li>
+<li>拒绝看老板脸色行事，做正确的事情，用事实说话，勇敢做自己</li>
+</ul>
+<h3>精彩瞬间</h3>
+<p>团队在三亚团建，一起享受蓝天白云大海
+<img src="//dn-cnode.qbox.me/FnaQYIqMzQTKOM5c-3ryjdBfEPWm" alt="4.jpg"></p>
+<p>外国友人访问，全是很流弊的同学
+<img src="//dn-cnode.qbox.me/FjIyo7gATmVbkSoiGVieMGoadpQ_" alt="2.jpg"></p>
+<p>同志们在野外打枪，呵呵哒
+<img src="//dn-cnode.qbox.me/FvYXypgsO0hyULjdf2tYN1m5-KwQ" alt="555.jpg"></p>
+<p>满地铁的广告，咳咳，有钱任性
+<img src="//dn-cnode.qbox.me/Fkr8e61ySBzW0OEenq2s3O4_uKzj" alt="IMG_7471.JPG"></p>
+<p>前几天儿童节的公司活动，可爱的蓝胖子
+<img src="//dn-cnode.qbox.me/FpNsUu3senttqiixv8hspvGSl7XL" alt="1.jpg"></p>
+<h3>招聘职位</h3>
+<p>作为一家高速发展的互联网公司，我们的所有技术职位都很需要人，永远都对优秀的人才敞开大门。
+不管你是【玩<strong>前端</strong>，玩<strong>后端</strong>，还是玩<strong>运维</strong>，或者玩<strong>架构</strong>】的，都欢迎投简历给我们，我们需要你！</p>
+<p>北京总部主要负责智课网、批改网的研发工作；
+杭州研发部主要负责备考帝、小智云的研发工作；</p>
+<p>智课技术部门，几乎全部使用node做前端、后端、移动端开发，整体技术栈是react/redux/express/sequelize/docker等等。
+所以你如果很喜欢node的话，想在这方面更多的进步、发展和交流的话，欢迎选择我们，我们已经积累了很多很多的干货。</p>
+<p>所有岗位的需求其实都很简单，只要你<strong>足够优秀</strong>！
+具体的职位要求可以看我们的招聘专题页，不过上面都是一些形式化的介绍，看看就好。</p>
+<h3>工作地点</h3>
+<p>北京总部：交大西门知行大厦2楼
+杭州研发部：杭大路聚龙大厦B座2楼</p>
+<h3>内推邮箱</h3>
+<p>大家可以把简历发到下面的邮箱，牛X的同学可以直接甩我一个github或者blog地址
+<a href="mailto:zhangyunnian@innobuddy.com" target="_blank">zhangyunnian@innobuddy.com</a></p>
+</div>
