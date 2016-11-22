@@ -6,11 +6,12 @@ import fs from 'fs'
 const nm = nightmare({show: true, waitTimeout: config.nightmare.waitTimeout})
 const POST_TITLE = '【北京/杭州】智课网，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
 
-async function run() {
+const run = async () => {
   try {
     await runHelper.runTimes(login, config.run.times, config.run.timeout)
     console.log('登录成功')
   } catch (e) {
+    await nm.end()
     console.log('登录失败')
     email.sendMail('[recruit robot]: 登录失败')
   }
@@ -22,6 +23,7 @@ async function run() {
     post = await runHelper.runTimes(getPostWithPrarms, config.run.times, config.run.timeout)
     console.log(`获取帖子${post}成功`)
   } catch (e) {
+    await nm.end()
     console.log('获取帖子失败')
     // email.sendMail('[recruit robot]: 获取帖子失败')
   }
@@ -31,9 +33,11 @@ async function run() {
       const replyPostWithPrarms = replyPost.bind(null, post)
       await runHelper.runTimes(replyPostWithPrarms, config.run.times, config.run.timeout)
       console.log('回复帖子成功')
+      await nm.end()
       email.sendMail('[recruit robot]: 回复帖子成功')
       return
     } catch (e) {
+      await nm.end()
       console.log('回复帖子失败')
       email.sendMail('[recruit robot]: 回复帖子失败')
       return
@@ -43,8 +47,10 @@ async function run() {
   try {
     await runHelper.runTimes(createPost, config.run.times, config.run.timeout)
     console.log('创建帖子成功')
+    await nm.end()
     email.sendMail('[recruit robot]: 创建帖子成功')
   } catch (e) {
+    await nm.end()
     console.log('创建帖子失败')
     email.sendMail('[recruit robot]: 创建帖子失败')
   }
@@ -130,4 +136,12 @@ const createPost = async () => {
   }, content)
 }
 
-run()
+const alwaysRun = async () => {
+  setTimeout(() => {
+    run().then(() => {
+      alwaysRun()
+    })
+  }, 20 * 60 * 60 * 1000)
+}
+
+alwaysRun()
