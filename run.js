@@ -3,10 +3,11 @@ import config from './config'
 import runHelper from './libs/runHellper'
 import email from './libs/email'
 import fs from 'fs'
-const nm = nightmare({show: true, waitTimeout: config.nightmare.waitTimeout})
+let nm = null
 const POST_TITLE = '【北京/杭州】智课网，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
 
 const run = async () => {
+  nm = nightmare({show: true, waitTimeout: config.nightmare.waitTimeout})
   try {
     await runHelper.runTimes(login, config.run.times, config.run.timeout)
     console.log('登录成功')
@@ -141,7 +142,7 @@ const alwaysRun = async () => {
     run().then(() => {
       alwaysRun()
     })
-  }, 20 * 60 * 60 * 1000)
+  }, 5 * 60 * 60 * 1000)
 }
 
 alwaysRun()
