@@ -7,7 +7,13 @@ let nm = null
 const POST_TITLE = '【北京/杭州】智课网，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
 
 const run = async () => {
-  nm = nightmare({show: true, waitTimeout: config.nightmare.waitTimeout})
+  nm = nightmare({
+    show: true,
+    waitTimeout: config.nightmare.waitTimeout,
+    webPreferences: {
+      images: false,
+    },
+  })
   try {
     await runHelper.runTimes(login, config.run.times, config.run.timeout)
     console.log('登录成功')
@@ -144,5 +150,8 @@ const alwaysRun = async () => {
     })
   }, 5 * 60 * 60 * 1000)
 }
-
-alwaysRun()
+run().then(() => {
+  alwaysRun()
+}).catch(() => {
+  alwaysRun()
+})
