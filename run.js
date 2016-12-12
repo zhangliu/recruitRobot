@@ -30,7 +30,6 @@ const run = async () => {
     post = await runHelper.runTimes(getPostWithPrarms, config.run.times, config.run.timeout)
     console.log(`获取帖子${post}成功`)
   } catch (e) {
-    await nm.end()
     console.log('获取帖子失败')
     // email.sendMail('[recruit robot]: 获取帖子失败')
   }
