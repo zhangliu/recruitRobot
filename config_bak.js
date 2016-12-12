@@ -1,7 +1,7 @@
 const base64 = require('base-64')
 export default {
-  username: 'zhangliuge@yeah.net',
-  password: base64.decode('emhhbmdsaXVoanVpdmMw'),
+  username: 'xxxxxxxxxxxxx',
+  password: base64.decode('xxxxxxxxxxxxx'),
   nightmare: {
     waitTimeout: 60000,
   },
@@ -15,12 +15,12 @@ export default {
       port: 465,
       secure: true, // use SSL
       auth: {
-        user: 'zhangyunnian@innobuddy.com',
-        pass: base64.decode('emhhbmdsaXVJbm5vYnVkZHkw'),
+        user: 'xxxxxxxxxxx',
+        pass: base64.decode('xxxxxxxxxxxxxxx'),
       },
     },
     receivers: [
-      'zhangyunnian@innobuddy.com',
+      'xxxxxxxxxxxxxxxx',
     ],
   },
 }
