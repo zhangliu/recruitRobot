@@ -27,7 +27,7 @@ const run = async () => {
   try {
     const getPostWithPrarms = getPost.bind(null, POST_TITLE)
     // const getPostWithPrarms = getPost.bind(null, 'cnode有做敏感词过滤吗')
-    post = await runHelper.runTimes(getPostWithPrarms, config.run.times, config.run.timeout)
+    post = await runHelper.runTimes(getPostWithPrarms, 1, config.run.timeout)
     console.log(`获取帖子${post}成功`)
   } catch (e) {
     console.log('获取帖子失败')
