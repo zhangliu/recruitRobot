@@ -4,7 +4,7 @@ import runHelper from './libs/runHellper'
 import email from './libs/email'
 import fs from 'fs'
 let nm = null
-const POST_TITLE = '【北京/杭州】智课网，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
+const POST_TITLE = '【北京/杭州】智课教育，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
 
 const run = async () => {
   nm = nightmare({
@@ -140,6 +140,7 @@ const createPost = async () => {
     editor.push(postContent)
     document.querySelector('#create_topic_form .editor_buttons input').click()
   }, content)
+  await nm.wait('.delete_topic_btn')
 }
 
 const alwaysRun = async () => {
