@@ -15,12 +15,12 @@ const mailOptions = {
 const sendMail = async (subject, message) => {
   return await new Promise((resolve, reject) => {
     transporter.sendMail(
-      Object.assign({}, mailOptions, {subject, text: message}),
+      Object.assign({}, mailOptions, { subject, text: message }),
       (error, info) => {
         if (error) {
-          reject(error);
+          reject(error)
         }
-        resolve(info.response);
+        resolve(info.response)
       }
     )
   })
