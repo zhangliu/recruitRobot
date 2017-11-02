@@ -1,4 +1,8 @@
-require('babel-register')
-require("babel-polyfill")
-require('./run')
+const cnodejsRunner = require('./runners/cnodejsRunner')
+
+async function main() {
+  await cnodejsRunner.run()
+}
+
+main()
 

@@ -1,7 +1,7 @@
-const nodemailer = require('nodemailer');
-import config from '../config'
+const nodemailer = require('nodemailer')
+const config = require('../config')
 
-const transporter = nodemailer.createTransport(config.email.sender);
+const transporter = nodemailer.createTransport(config.email.sender)
 
 // setup e-mail data with unicode symbols
 const mailOptions = {
@@ -10,7 +10,7 @@ const mailOptions = {
   subject: '[recruit robot]: notice!', // Subject line
   text: 'empty content', // plaintext body
   html: '', // html body
-};
+}
 
 const sendMail = async (subject, message) => {
   return await new Promise((resolve, reject) => {
@@ -26,6 +26,6 @@ const sendMail = async (subject, message) => {
   })
 }
 
-export default {
+module.exports = {
   sendMail,
 }

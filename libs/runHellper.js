@@ -15,12 +15,12 @@ const runTimeout = async (func, timeout = 20000) => {
     func(),
     new Promise((resolve, reject) => {
       setTimeout(() => {
-        reject(new Error('运行超时！'));
-      }, timeout);
+        reject(new Error('运行超时！'))
+      }, timeout)
     }),
-  ]);
+  ])
 }
 
-export default {
+module.exports = {
   runTimes,
 }

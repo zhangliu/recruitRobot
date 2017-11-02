@@ -1,7 +1,6 @@
-const base64 = require('base-64')
-export default {
+module.exports = {
   username: 'xxxxxxxxxxxxx',
-  password: base64.decode('xxxxxxxxxxxxx'),
+  password: 'xxxxxxxxxxxxx',
   nightmare: {
     waitTimeout: 60000,
   },
@@ -16,7 +15,7 @@ export default {
       secure: true, // use SSL
       auth: {
         user: 'xxxxxxxxxxx',
-        pass: base64.decode('xxxxxxxxxxxxxxx'),
+        pass: 'xxxxxxxxxxxxxxx',
       },
     },
     receivers: [

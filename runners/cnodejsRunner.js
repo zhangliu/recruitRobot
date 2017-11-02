@@ -1,8 +1,9 @@
-import nightmare from 'nightmare'
-import config from './config'
-import runHelper from './libs/runHellper'
-import email from './libs/email'
-import fs from 'fs'
+const nightmare = require('nightmare')
+const config = require('../config')
+const runHelper = require('../libs/runHellper')
+const email = require('../libs/email')
+const fs = require('fs')
+
 let nm = null
 const POST_TITLE = '【北京/杭州】智课教育，寻找优秀的你！18K~36K，年终奖2-4个月，丰厚期权！'
 
@@ -60,7 +61,6 @@ const run = async () => {
     console.log('创建帖子失败')
     email.sendMail('[recruit robot]: 创建帖子失败')
   }
-
 }
 
 const login = async () => {
@@ -85,24 +85,24 @@ const login = async () => {
   console.log('成功的登录并且进入到了主页')
 }
 
-const getPost = async (title) => {
+const getPost = async title => {
   const selector = `.topic_title[title="${title}"]`
-  console.log(`尝试获取帖子${selector}`);
+  console.log(`尝试获取帖子${selector}`)
   await nm.wait(selector)
   return selector
 }
 
-const replyPost = async (selector) => {
+const replyPost = async selector => {
   await nm.click(selector)
   console.log(`点击了${selector}`)
   await nm.wait('#reply_form')
-  console.log(`检测到回复表单`);
+  console.log('检测到回复表单');
   const url = await nm.url()
   await nm.evaluate(() => {
     var textarea = $(document.querySelector('#reply_form textarea.editor'))
     var editor = textarea.data('editor')
     var cm = editor.codemirror
-    cm.focus();
+    cm.focus()
     editor.push('顶，每日一顶！欢迎大家踊跃投简历哈！')
     document.querySelector('#reply_form .editor_buttons input').click()
   })
@@ -113,9 +113,9 @@ const replyPost = async (selector) => {
       return false
     }
   }
-  console.log(`检测到url发生了变化！`);
+  console.log('检测到url发生了变化！')
   await nm.wait('#reply_form')
-  console.log(`检测到回复表单，说明回复成功！`);
+  console.log('检测到回复表单，说明回复成功！')
   return true
 }
 
@@ -124,7 +124,7 @@ const createPost = async () => {
   await nm.wait('#create_topic_form')
   await nm.select('#tab-value', 'job')
   await nm.type('#title', POST_TITLE)
-  const content = await new Promise((resolve) => {
+  const content = await new Promise(resolve => {
     fs.readFile('./cnodejs_post.txt', (err, data) => {
       if (err) {
         resolve(null)
@@ -133,25 +133,16 @@ const createPost = async () => {
     })
   })
   await nm.evaluate(postContent => {
-    var editor = new Editor();
+    var editor = new Editor()
     editor.render(document.querySelector('.markdown_in_editor textarea.editor'))
     var cm = editor.codemirror
-    cm.focus();
+    cm.focus()
     editor.push(postContent)
     document.querySelector('#create_topic_form .editor_buttons input').click()
   }, content)
   await nm.wait('.delete_topic_btn')
 }
 
-const alwaysRun = async () => {
-  setTimeout(() => {
-    run().then(() => {
-      alwaysRun()
-    })
-  }, 5 * 60 * 60 * 1000)
+module.exports = {
+  run,
 }
-run().then(() => {
-  alwaysRun()
-}).catch(() => {
-  alwaysRun()
-})
