@@ -1,11 +1,8 @@
-const runTimes = async (func, times, timeout = 20000) => {
+const runTimes = async (func, times = 3, timeout = 20000) => {
   for (let i = 0; i < times; i++) {
-    // console.log(`尝试运行第${i}次`);
     try {
       return await runTimeout(func, timeout)
-    } catch (e) {
-      // console.log(e.message)
-    }
+    } catch (e) { }
   }
   throw new Error(`运行${times}次后仍然超时！`)
 }

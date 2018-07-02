@@ -19,7 +19,7 @@
   "homepage": "https://github.com/zhangliu/recruitRobot#readme",
   "dependencies": {
     "js-base64": "^2.3.2",
-    "nightmare": "^2.7.0",
-    "nodemailer": "^2.6.4"
+    "nightmare": "^2.10.0",
+    "nodemailer": "^4.6.7"
   }
 }

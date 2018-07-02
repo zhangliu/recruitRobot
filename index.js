@@ -1,4 +1,4 @@
-const cnodejsRunner = require('./runners/cnodejsRunner')
+const cnodejsRunner = require('./runners/cnodejs')
 
 async function main() {
   await cnodejsRunner.run()

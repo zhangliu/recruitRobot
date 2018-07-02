@@ -10,15 +10,17 @@ const mailOptions = {
   subject: '[recruit robot]: notice!', // Subject line
   text: 'empty content', // plaintext body
   html: '', // html body
-}
+};
 
+//subject = 'test subject'
+//message = 'hello world!'
 const sendMail = async (subject, message) => {
   return await new Promise((resolve, reject) => {
     transporter.sendMail(
       Object.assign({}, mailOptions, { subject, text: message }),
       (error, info) => {
         if (error) {
-          reject(error)
+          return reject(error)
         }
         resolve(info.response)
       }
