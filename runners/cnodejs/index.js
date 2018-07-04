@@ -30,9 +30,9 @@ const run = async () => {
       console.log(err.message)
     }
   }
-
-  await nm.end()
-  email.sendMail('[recruit robot]: 创建帖子成功')
+  console.log('cnodejs-任务执行成功')
+  process.exit()
+  // email.sendMail('[recruit robot]: cnodejs-任务执行成功')
 }
 
 const publishJob = async job => {
@@ -41,11 +41,11 @@ const publishJob = async job => {
     await createPost(job)
     console.log('创建帖子成功')
     await nm.end()
-    email.sendMail('[recruit robot]: 创建帖子成功')
+    await email.sendMail(`[recruit robot]: 创建帖子(${job.title})成功`)
   } catch (e) {
     await nm.end()
     console.log('创建帖子失败')
-    email.sendMail('[recruit robot]: 创建帖子失败')
+    await email.sendMail(`[recruit robot]: 创建帖子(${job.title})失败`)
   }
 }
 
