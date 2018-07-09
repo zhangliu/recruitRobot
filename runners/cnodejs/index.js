@@ -42,10 +42,10 @@ const publishJob = async job => {
   try {
     await nm.goto('https://cnodejs.org/?tab=job')
     await createPost(job)
-    console.log('创建帖子成功')
+    console.log(`创建帖子(${job.title})成功`)
     await email.sendMail(`[recruit robot]: 创建帖子(${job.title})成功`)
   } catch (e) {
-    console.log('创建帖子失败')
+    console.log(`创建帖子(${job.title})失败`)
     await email.sendMail(`[recruit robot]: 创建帖子(${job.title})失败`)
   }
 }
